@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in js</title>
+</head>
+
+<body>
+    <script>
+        function demo1(text){
+            console.log("hello js");
+        }
+        // function demo2{
+        //     console.log("hello"+text);
+        // }
+        demo1("React");
+        function cal(a, b = 30) {
+            console.log("addition of two number" + (a + b));
+        }
+        cal(12);
+        let msg = function () {
+
+            console.log("hello js");
+        };
+        msg();
+        // shore code for above functtion 
+        let msg1 = () => console.log(" hello fuction as an arrow");
+
+        msg1();
+   // arrow function using multilines
+        let add = (a, b) => {
+ console.log("addition of two no." + (a + b));
+      }
+        add(4, 5);
+        // An IIFE (Immediately Invoked Function Expression) in JavaScript is a 
+        // function that runs as soon as it is defined,
+        //  mainly used to avoid polluting the global scope and to create private variables.
+(function(){
+
+    console.log("iief in  j s")
+})();
+// (()=>console.log("iife using arrow"))();
+// call  back In JavaScript, callbacks are one of the most fundamental concepts for handling functions as first-class citizens. Let me break it down clearly:
+
+
+// - A callback function is simply a function passed as an argument to another function.
+
+
+function mul(callback){
+var num1=10;
+console.log("first value is"+num1); 
+var num2=20;
+console.log("second value is"+num2); 
+
+var res= num1+num2;
+callback(res);
+}
+function result(res){
+    console.log("Multiplication is " +res);
+}
+mul(result);
+// callback function using set timeout API
+function msg2(){
+
+    console.log("hello call back");
+    document.writeln("loading........")
+};
+setTimeout(msg2,2000);
+loading();
+// map filter and reduce
+let num=[3,4,1,4]
+let finalresult =map.num(n=>n*2);
+console.log(finalresult);
+
+
+let finalresult2=num.reduce((total,n)=>total+n);
+console.log(finalresult2);
+    
+
+
+async function userdata()
+
+
+             {
+   try{
+let data = await fetch('https://dummyjson.com/products/1');
+let updateData =await data.json();
+console.log(updateData);
+
+   } 
+
+catch(error){
+    console.log("not fetch"+error);
+}
+
+}
+
+userdata();
+
+let userInfo={
+name :"John",
+age :23,
+mob:98765755,
+email:"john@gamil.com"
+
+
+}
+localStorage.setItem('prefences',JSON.stringify(userInfo));
+
+let storagepreference = JSON.parse(localStorage.getItem('prefences'));
+console.log(storagepreference.name);
+ </script>
+
+
+
+
+
+
+ </body>
+
+
+</html>
